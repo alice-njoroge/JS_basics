@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        .bodyStyle {
+            background-color: black;
+            color: white;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Heading </h1>
+    <h1 id="heading1">Heading </h1>
     <p title="t1" id="demo">Paragraph</p>
-    <button type="button" class="btn btn-primary" onclick="document.getElementById('demo').innerHTML='I am learning Javascript'">click</button>
+    <button id="id1" type="button" class="btn btn-primary">click</button>
+    <script>
+        document.getElementById("id1").addEventListener("click", myFunction);
+        
+        function myFunction() {
+            document.getElementById('heading1').remove();
+            document.getElementsByTagName('body')[0].classList.add("bodyStyle");
+            document.getElementById('demo').innerHTML = 'I am learning Javascript';
+        }
+
+    </script>
 </body>
+
 </html>
