@@ -16,8 +16,12 @@ class Model extends Car {
     show(){
         return this.presentBrand()+ " "+this.model;
     }
+    static Hello(){
+        return "hello static world";
+    }
 }
 
 myCar = new Model("ford","Mustang");
 myCar.show();
 document.getElementById('cars').innerText = myCar.show();
+document.getElementById('st').innerText = Model.Hello();
