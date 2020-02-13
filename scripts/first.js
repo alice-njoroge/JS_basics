@@ -9,10 +9,12 @@ function myFunction() {
 function hello() {
     return "hello world";
 } */
-
+/*
 hello = () => {
     return "hello short world!"
 };
+*/
+hello = () => "hello world!";
 
 
 document.getElementById('hello').innerText = hello();
