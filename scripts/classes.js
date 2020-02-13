@@ -1,13 +1,23 @@
-class Car{
+class Car {
     constructor(name) {
         this.brand = name;
     }
-    presentBrand(){
-        return "I currently drive a " +this.brand;
+
+    presentBrand() {
+        return "I currently drive a " + this.brand;
     }
 }
-myCar = new Car("ford");
 
+class Model extends Car {
+    constructor(name, mod) {
+        super(name);
+        this.model = mod;
+    }
+    show(){
+        return this.presentBrand()+ " "+this.model;
+    }
+}
 
-
-document.getElementById('cars').innerText = myCar.presentBrand();
+myCar = new Model("ford","Mustang");
+myCar.show();
+document.getElementById('cars').innerText = myCar.show();
