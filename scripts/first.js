@@ -14,7 +14,11 @@ hello = () => {
     return "hello short world!"
 };
 */
-hello = () => "hello world!";
+
+//hello = () => "hello world!";
+
+hello = (val) => "hello "+val;
 
 
-document.getElementById('hello').innerText = hello();
+
+document.getElementById('hello').innerText = hello("world");
